@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transportes Dely</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="dely.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Start: Tabs -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="first-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#first"
+            type="button"
+            role="tab"
+            aria-controls="first"
+            aria-selected="true"
+          >
+            Consultar trechos x modalidade
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="second-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#second"
+            type="button"
+            role="tab"
+            aria-controls="second"
+            aria-selected="false"
+          >
+            Cadastrar transporte
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="third-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#third"
+            type="button"
+            role="tab"
+            aria-controls="third"
+            aria-selected="false"
+          >
+            Dados estatísticos
+          </button>
+        </li>
+      </ul>
+      <!-- End: Tabs -->
+
+      <div class="tab-content">
+        <!-- Start: First Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="first"
+          role="tabpanel"
+          aria-labelledby="first-tab"
+        >
+          <h1 class="text-center mt-4">Consultar trechos x modalidade</h1>
+
+          <label>Cidade de Origem</label>
+          <input id="origin_1" placeholder="Digite aqui" type="text" />
+
+          <label>Cidade de Destino</label>
+          <input id="destination_1" placeholder="Digite aqui" type="text" />
+
+          <label>Modalidade</label>
+          <select id="modality_1">
+            <option value="4,87">Caminhão de pequeno porte</option>
+            <option value="11,92">Caminhão de médio porte</option>
+            <option value="27,44">Caminhão de grande porte</option>
+          </select>
+
+          <button id="submit_1" class="btn">Cotar</button>
+
+          <h3 id="result_1" class="text-center mt-4"></h3>
+        </div>
+        <!-- End: First Tab -->
+
+        <!-- Start: Second Tab -->
+        <div
+          class="tab-pane fade"
+          id="second"
+          role="tabpanel"
+          aria-labelledby="second-tab"
+        >
+          <h1 class="text-center mt-4">Cadastrar transporte</h1>
+
+          <label>Cidade de Origem</label>
+          <input id="origin_2" placeholder="Digite aqui" type="text" />
+
+          <label>Parada</label>
+          <input id="stop_2" placeholder="Digite aqui" type="text" />
+
+          <label>Cidade de Destino</label>
+          <input id="destination_2" placeholder="Digite aqui" type="text" />
+
+          <div class="row">
+            <div class="col-sm">
+              <label class="text-center">Item</label>
+            </div>
+            <div class="col-sm">
+              <label class="text-center">Qtd. Total</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm">
+              <p>Celular</p>
+            </div>
+            <div class="col-sm">
+              <div class="input-group">
+                <input
+                  id="celular"
+                  name="Celular"
+                  value="0"
+                  type="number"
+                  class="form-control text-center"
+                  min="0"
+                  step="1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm">
+              <p>Geladeira</p>
+            </div>
+            <div class="col-sm">
+              <div class="input-group">
+                <input
+                  id="geladeira"
+                  name="Geladeira"
+                  value="0"
+                  type="number"
+                  class="form-control text-center"
+                  min="0"
+                  step="1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm">
+              <p>Freezer</p>
+            </div>
+            <div class="col-sm">
+              <div class="input-group">
+                <input
+                  id="freezer"
+                  name="Freezer"
+                  value="0"
+                  type="number"
+                  class="form-control text-center"
+                  min="0"
+                  step="1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm">
+              <p>Cadeira</p>
+            </div>
+            <div class="col-sm">
+              <div class="input-group">
+                <input
+                  id="cadeira"
+                  name="Cadeira"
+                  value="0"
+                  type="number"
+                  class="form-control text-center"
+                  min="0"
+                  step="1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm">
+              <p>Luminária</p>
+            </div>
+            <div class="col-sm">
+              <div class="input-group">
+                <input
+                  id="luminaria"
+                  name="Luminária"
+                  value="0"
+                  type="number"
+                  class="form-control text-center"
+                  min="0"
+                  step="1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm">
+              <p>Lavadora de roupa</p>
+            </div>
+            <div class="col-sm">
+              <div class="input-group">
+                <input
+                  id="lavadora"
+                  name="Lavadora de roupa"
+                  value="0"
+                  type="number"
+                  class="form-control text-center"
+                  min="0"
+                  step="1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button id="submit_2" class="btn">Cotar</button>
+
+          <h3 id="result_2" class="text-center mt-4"></h3>
+          <h3 id="result_items_2" class="text-center mt-1"></h3>
+        </div>
+        <!-- End: Second Tab -->
+
+        <!-- Start: Third Tab -->
+        <div
+          class="tab-pane fade"
+          id="third"
+          role="tabpanel"
+          aria-labelledby="third-tab"
+        >
+          <h1 class="text-center mt-4">Dados estatísticos</h1>
+
+          <p class="text-center">Caminhão de Pequeno Porte</p>
+          <canvas id="chart_small"></canvas>
+
+          <p class="text-center mt-4">Caminhão de Médio Porte</p>
+          <canvas id="chart_medium"></canvas>
+
+          <p class="text-center mt-4">Caminhão de Grande Porte</p>
+          <canvas id="chart_large"></canvas>
+
+          <button id="reset" class="btn" style="background-color: #44951c">
+            Finalizar
+          </button>
+        </div>
+        <!-- End: Third Tab -->
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/dely.js"></script>
+</html>
